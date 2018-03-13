@@ -100,15 +100,15 @@ Collections are like tables in SQL databases. Initialising a collection is also 
 now if we run again `show dbs` after we create a collection with a document we will see that the database appears in the list.
  This is because at the moment that we inserted this document, the document was created, which in turn created the collection which in turn created the database.
 
-Exercise 1:
+### Exercise 1:
 
 Insert a new student with name: Mary
 
-Exercise 2:
+### Exercise 2:
 
 Insert a new student with name: Madeline and id=2 (integer)
 
-Exercise 3:
+### Exercise 3:
 
 Insert a new student with name: Steve, midterm score of 80 and final score of 100
 
@@ -139,11 +139,11 @@ AND / OR queries:
 > db.Student.find({"$or": [{"scores.midterm": {$gt: 60}}, {"scores.final": {$lte: 75}}]} )
 ```
 
-Exercise 3:
+### Exercise 3:
 
 Find the user Maria that you inserted in exercise 1
 
-Exercise 4:
+### Exercise 4:
 
 Search for students that have scored between [50,80) in midterm AND [80,100] in final exam
 
@@ -181,11 +181,11 @@ multi:true
 
 (!) We can get update to update or *create* the document by using upsert:true
 
-Exercise 5:
+### Exercise 5:
 
 Update the student madeline that you created back in exercise 2 to have midterm score of 50 and final score of 100 respectively
 
-Exercise 6:
+### Exercise 6:
 
 Update the grades of all students to be 90
 
@@ -205,11 +205,11 @@ Deleting a whole collection:
 Deleting a database:
 ```db.dropDatabase()``` to delete the current database
 
-Exercise 7:
+### Exercise 7:
 
 Delete user steve that you created back in exercise 3
 
-Exercise 8:
+### Exercise 8:
 
 Delete all users with midterm score less than 80
 
@@ -240,7 +240,7 @@ All of these are important for every database system but even more important in 
 __THERE IS NO ROLLBACK!__ There are no transactions. Once you delete something, it's gone.
 
 
-Exercise 9:
+### Exercise 9:
 
 Using MongoDB shell, create a script to output in a new collection named BoostedStudents one document for every document in Student collection with their final grade being boosted by 10%
 
@@ -290,7 +290,7 @@ What's the output like?
 More information: https://docs.mongodb.com/manual/aggregation/
 
 
-Exercise 10:
+### Exercise 10:
 
 Now let's redo Exercise 9 using the aggregation framework.
 
